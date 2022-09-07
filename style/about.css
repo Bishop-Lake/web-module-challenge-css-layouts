@@ -1,5 +1,3 @@
-/* Add CSS styling here */
-
 /* Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -45,9 +43,10 @@ table {
 	border-spacing: 0;
 }
 /* Reset End */
-
 body {
-	/**background-color: rgb(173, 182, 196);**/
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 }
 
 nav {
@@ -60,7 +59,7 @@ nav {
 	background-color: rgb(61, 90, 108);
 	color:rgb(173, 182, 196);
 	padding: 0px 15px 0px 15px;
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	
 }
@@ -82,94 +81,71 @@ nav {
 	color: rgb(61, 90, 108);
 }
 
-
-
-.splash div{
+.main {
 	display: flex;
-	flex-direction: column;
+	padding: 30px;
+	width: 90%;
+	margin: auto;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	color: rgb(61, 90, 108);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	flex-grow: 2;
+}
+
+.main .photo {
+	height: 350px;
+	border-radius: 10px;
+}
+
+.main a {
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: auto;
-	margin-bottom: 20px;
-	padding: 20px;
-	width: 70%;
-	height: 350px;
-	text-align: center;
-	background-image: url('https://images.unsplash.com/photo-1500423079914-b65af272b8db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxMzQ0NTA3fHxlbnwwfHx8fA%3D%3D&w=1000&q=80');
-	background-size: cover;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 100PX;
+	height: 100px;
+	margin-top: 25PX;
 	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.main a:hover {
+	background-color: rgb(61, 90, 108);
+}
+
+.main .social {
+	width: 80px;
+}
+
+.main a:hover .social {
+	filter: grayscale(100) contrast(100) invert(100);
+}
+
+
+
+
+
+.main .right {
+	padding-left: 30px;
+}
+
+.right {
+	display: flex;
+	flex-direction: column;
+	border-left: 2px solid lightgray;
+	margin-left: 30px;
+}
+
+.links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.main img {
 	
 }
 
-.splash img {
-	height: 150px;
-	width: 70px;
-	padding: 20px 0px 0px 5px;
-}
-
-.splash .button {
-	background-color: inherit;
-	margin-top: 10px;
-	border-color: rgb(61, 90, 108);
-	color: rgb(61, 90, 108);
-	border:solid rgb(61, 90, 108);
-	text-decoration: none;
-	text-align: center;
-	padding: 5px 50px 5px 50px;
-	font-family: 'Courgette';
-	font-size: 1.25rem;
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-.splash .button:hover {
-	border-color: white;
-	color: white;
-}
-
-
-.name {
-	font-size: 3rem;
-	font-family: 'Courgette';
-	color: rgb(61, 90, 108);
-}
-
-.gallery {
-	display: flex;
-	justify-content: space-between;
-	flex-flow: row wrap;
-	padding: 0 30px;
-}
-
-.card {
-	display: flex;
-	flex-direction: column;
-	width: 30%;
-	text-align: center;
-	margin: 20px 0px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	overflow: hidden;
-	border-radius: 10px;
-}
-
-.card:hover {
-	box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.4), 0 10px 24px 0 rgba(0, 0, 0, 0.23);
-}
-
-
-
-.card img {
-	width: 100%;
-	height: 90%;
-	max-height: 364px;
-	object-fit: cover;
-	animation-duration: 4s;
-}
-
-.card h2 {
-	padding: 10px;
-}
 
 footer {
 	display: flex;
@@ -183,6 +159,7 @@ footer {
 	color:rgb(173, 182, 196);
 	padding: 15px 15px 15px 15px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	justify-self: flex-end;
 }
 
 footer .button {
